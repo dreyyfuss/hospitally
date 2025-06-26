@@ -1,0 +1,30 @@
+package com.hospitally.hospitally.model.entity;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class Staff {
+
+    private int staffId;
+
+    private int staffUserId;
+
+    private int staffDepartmentId;
+
+    private String staffRole;
+
+    private String staffGender;
+
+    private String staffDateOfBirth;
+
+    private String staffJoinDate;
+
+    private String staffStatus;
+
+    private String staffCreatedAt;
+
+    private String staffUpdatedAt;
+
+}
