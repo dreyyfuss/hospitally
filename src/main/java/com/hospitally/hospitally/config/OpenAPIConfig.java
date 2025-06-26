@@ -1,4 +1,4 @@
-package com.example.tesaStudents.config;
+package com.hospitally.hospitally.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 
