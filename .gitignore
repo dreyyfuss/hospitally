@@ -1,5 +1,5 @@
 HELP.md
-.gradle
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -18,7 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -32,6 +32,22 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
-
 ### VS Code ###
 .vscode/
+
+###
+.gradle/8.14.2/checksums/checksums.lock
+.gradle/8.14.2/checksums/md5-checksums.bin
+.gradle/8.14.2/checksums/sha1-checksums.bin
+.gradle/8.14.2/executionHistory/executionHistory.bin
+.gradle/8.14.2/executionHistory/executionHistory.lock
+.gradle/8.14.2/fileHashes/fileHashes.bin
+.gradle/8.14.2/fileHashes/fileHashes.lock
+.gradle/8.14.2/fileHashes/resourceHashesCache.bin
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/outputFiles.bin
+.gradle/file-system.probe
+.idea/.name
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
