@@ -19,6 +19,6 @@ public class MedicationSale {
 
     private String medicationSaleUpdatedAt;
 
-    private String medicationStatus;
+    private String medicationSaleStatus;
 
 }
