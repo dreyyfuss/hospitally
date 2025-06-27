@@ -17,7 +17,7 @@ public class Staff {
 
     private String staffGender;
 
-    private String staffDateOfBirth;
+    private Date staffDateOfBirth;
 
     private String staffJoinDate;
 
