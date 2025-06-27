@@ -3,6 +3,8 @@ package com.hospitally.hospitally.model.entity;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Builder
 public class Staff {
