@@ -7,6 +7,8 @@ import java.util.Date;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Staff {
 
     private int staffId;
