@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class ApiResponse<T> {
-    private String code;           //"00" - success, "22" - error
-    private String statusMessage;  //"Success", "Not Found", "Validation Error"
+    private String statusCode; // "00", "22"
+    private String statusMessage; // "Success", "Error"
     private T data;
 }
