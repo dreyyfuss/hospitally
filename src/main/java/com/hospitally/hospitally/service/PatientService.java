@@ -1,9 +1,11 @@
 package com.hospitally.hospitally.service;
 
 import com.hospitally.hospitally.dto.request.patient.CreatePatientRequest;
+import com.hospitally.hospitally.dto.request.patient.UpdatePatientRequest;
 import com.hospitally.hospitally.dto.response.ApiResponse;
 import com.hospitally.hospitally.dto.response.ApiResponseBuilder;
 import com.hospitally.hospitally.dto.response.patient.PatientResponse;
+import com.hospitally.hospitally.exception.NotFoundException;
 import com.hospitally.hospitally.helper.PatientValidator;
 import com.hospitally.hospitally.model.entity.Patient;
 import com.hospitally.hospitally.repository.database.interfaces.PatientRepository;
@@ -82,4 +84,25 @@ public class PatientService {
                 .updatedAt(p.getPatientUpdatedAt())
                 .build();
     }
+
+    public ApiResponse<PatientResponse> updatePatient(int patientId, UpdatePatientRequest request) {
+
+        Patient existing = patientRepository.findPatientById(patientId)
+                .orElseThrow(() -> new NotFoundException("Patient not found"));
+
+        int rows = patientRepository.updatePatient(patientId, request);
+
+        if (rows > 0) {
+            return ApiResponseBuilder.success(
+                    PatientResponse.builder()
+                            .patientId(patientId)
+                            .message("Patient updated successfully")
+                            .build(),
+                    "Success"
+            );
+        }
+
+        return ApiResponseBuilder.error("Failed to update patient");
+    }
+
 }
