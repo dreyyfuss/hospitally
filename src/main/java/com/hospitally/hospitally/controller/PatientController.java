@@ -54,4 +54,10 @@ public class PatientController {
         return ResponseEntity.ok(response);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ApiResponse<PatientResponse>> deletePatient(@PathVariable int id) {
+        ApiResponse<PatientResponse> response = patientService.deletePatient(id);
+        return ResponseEntity.ok(response);
+    }
+
 }
