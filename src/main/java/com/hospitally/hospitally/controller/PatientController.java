@@ -45,4 +45,13 @@ public class PatientController {
         ApiResponse<List<PatientResponse>> response = patientService.getAllPatients();
         return ResponseEntity.ok(response);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse<PatientResponse>> updatePatient(
+            @PathVariable int id,
+            @RequestBody @Valid UpdatePatientRequest request) {
+        ApiResponse<PatientResponse> response = patientService.updatePatient(id, request);
+        return ResponseEntity.ok(response);
+    }
+
 }
