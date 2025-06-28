@@ -20,8 +20,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<?>> handleUnhandledExceptions(Exception ex) {
-        ex.printStackTrace(); // Optional: helpful for dev/testing. Remove in production or log instead.
-
         return ResponseEntity.internalServerError().body(
                 ApiResponse.builder()
                         .statusCode("99")
