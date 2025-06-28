@@ -24,4 +24,12 @@ public class PatientQuery {
     public static final String CHECK_USER_IS_STAFF = """
         SELECT COUNT(*) FROM HO_STAFF WHERE staffUserId = :userId
     """;
+
+    public static final String GET_PATIENT_BY_ID = """
+        SELECT * FROM HO_PATIENT WHERE patientId = :id
+    """;
+
+    public static final String GET_ALL_PATIENTS = """
+        SELECT * FROM HO_PATIENT ORDER BY patientId
+    """;
 }
