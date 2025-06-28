@@ -115,7 +115,7 @@ public class PatientService {
         Patient patient = patientRepository.findPatientById(patientId)
                 .orElseThrow(() -> new NotFoundException("Patient not found"));
 
-        if ("DELETED".equalsIgnoreCase(patient.getPatientStatus())) {
+        if ("INACTIVE".equalsIgnoreCase(patient.getPatientStatus())) {
             throw new DuplicateResourceException("Patient already deleted");
         }
 
