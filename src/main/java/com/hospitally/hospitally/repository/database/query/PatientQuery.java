@@ -32,4 +32,22 @@ public class PatientQuery {
     public static final String GET_ALL_PATIENTS = """
         SELECT * FROM HO_PATIENT ORDER BY patientId
     """;
+
+    public static final String UPDATE_PATIENT = """
+    UPDATE HO_PATIENT
+    SET
+        patientGender = COALESCE(:gender, patientGender),
+        patientDateOfBirth = COALESCE(:dateOfBirth, patientDateOfBirth),
+        patientBloodGroup = COALESCE(:bloodGroup, patientBloodGroup),
+        patientGenotype = COALESCE(:genotype, patientGenotype),
+        patientMaritalStatus = COALESCE(:maritalStatus, patientMaritalStatus),
+        patientDisabilityStatus = COALESCE(:disabilityStatus, patientDisabilityStatus),
+        patientNextOfKinName = COALESCE(:nextOfKinName, patientNextOfKinName),
+        patientNextOfKinPhoneNumber = COALESCE(:nextOfKinPhoneNumber, patientNextOfKinPhoneNumber),
+        patientOccupation = COALESCE(:occupation, patientOccupation),
+        patientLanguagePreference = COALESCE(:languagePreference, patientLanguagePreference),
+        patientUpdatedAt = GETDATE()
+    WHERE patientId = :patientId
+""";
+
 }
