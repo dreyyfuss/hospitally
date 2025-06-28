@@ -94,14 +94,10 @@ public class PatientService {
 
         if (rows > 0) {
             // Fetch updated patient for clean response
-            Patient updatedPatient = patientRepository.findPatientById(patientId).orElse(null);
+            Patient updatedPatient = patientRepository.findPatientById(patientId)
+                    .orElseThrow(() -> new NotFoundException("Updated patient could not be retrieved"));
 
-            PatientResponse response = updatedPatient != null
-                    ? mapToResponse(updatedPatient)
-                    : PatientResponse.builder()
-                    .patientId(patientId)
-                    .message("Patient updated successfully")
-                    .build();
+            PatientResponse response = mapToResponse(updatedPatient);
             response.setMessage("Patient updated successfully");
 
             return ApiResponseBuilder.success(response, "Success");
