@@ -47,7 +47,14 @@ public class PatientQuery {
         patientOccupation = COALESCE(:occupation, patientOccupation),
         patientLanguagePreference = COALESCE(:languagePreference, patientLanguagePreference),
         patientUpdatedAt = GETDATE()
-    WHERE patientId = :patientId
-""";
+        WHERE patientId = :patientId
+    """;
+
+    public static final String DELETE_PATIENT = """
+        UPDATE HO_PATIENT
+        SET patientStatus = 'INACTIVE',
+        patientUpdatedAt = GETDATE()
+        WHERE patientId = :patientId
+    """;
 
 }
