@@ -15,6 +15,8 @@ public class Department {
 
     private String departmentCreatedAt;
 
+    private String departmentStatus;
+
     private String departmentUpdatedAt;
 
 }
