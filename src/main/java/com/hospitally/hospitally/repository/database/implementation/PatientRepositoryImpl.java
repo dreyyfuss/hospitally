@@ -94,4 +94,11 @@ public class PatientRepositoryImpl implements PatientRepository {
         return jdbcTemplate.update(PatientQuery.UPDATE_PATIENT, params);
     }
 
+    @Override
+    public int deletePatient(int patientId) {
+        MapSqlParameterSource params = new MapSqlParameterSource("patientId", patientId);
+        return jdbcTemplate.update(PatientQuery.DELETE_PATIENT, params);
+    }
+
+
 }
