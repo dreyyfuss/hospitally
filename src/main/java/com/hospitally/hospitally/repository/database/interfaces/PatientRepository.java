@@ -11,5 +11,7 @@ public interface PatientRepository {
     List<Patient> findAllPatients();
     Optional<Patient> findPatientById(int id);
     int updatePatient(int patientId, UpdatePatientRequest request);
+    int deletePatient(int patientId);
+
 
 }
