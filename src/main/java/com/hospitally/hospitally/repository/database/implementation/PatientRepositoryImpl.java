@@ -1,5 +1,6 @@
 package com.hospitally.hospitally.repository.database.implementation;
 
+import com.hospitally.hospitally.dto.request.patient.UpdatePatientRequest;
 import com.hospitally.hospitally.model.entity.Patient;
 import com.hospitally.hospitally.repository.database.interfaces.PatientRepository;
 import com.hospitally.hospitally.repository.database.query.PatientQuery;
@@ -74,5 +75,23 @@ public class PatientRepositoryImpl implements PatientRepository {
                 .build();
     }
 
+
+    @Override
+    public int updatePatient(int patientId, UpdatePatientRequest request) {
+        MapSqlParameterSource params = new MapSqlParameterSource()
+                .addValue("patientId", patientId)
+                .addValue("gender", request.getGender())
+                .addValue("dateOfBirth", request.getDateOfBirth())
+                .addValue("bloodGroup", request.getBloodGroup())
+                .addValue("genotype", request.getGenotype())
+                .addValue("maritalStatus", request.getMaritalStatus())
+                .addValue("disabilityStatus", request.getDisabilityStatus())
+                .addValue("nextOfKinName", request.getNextOfKinName())
+                .addValue("nextOfKinPhoneNumber", request.getNextOfKinPhoneNumber())
+                .addValue("occupation", request.getOccupation())
+                .addValue("languagePreference", request.getLanguagePreference());
+
+        return jdbcTemplate.update(PatientQuery.UPDATE_PATIENT, params);
+    }
 
 }
