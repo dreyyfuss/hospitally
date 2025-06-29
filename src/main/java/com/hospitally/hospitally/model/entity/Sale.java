@@ -5,6 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Sale {
 
     private int saleId;
