@@ -44,10 +44,12 @@ public class PatientService {
                 .patientLanguagePreference(request.getLanguagePreference())
                 .build();
 
-        int rows = patientRepository.createPatient(patient);
-        if (rows > 0) {
-            return ApiResponseBuilder.success(PatientResponse.builder().message(
-                    "Patient created successfully").build(), "Success");
+        int patientId = patientRepository.createPatient(patient);
+        if (patientId > 0) {
+            return ApiResponseBuilder.success(PatientResponse.builder()
+                    .patientId(patientId)
+                    .message("Patient created successfully")
+                    .build(), "Success");
         }
 
         return ApiResponseBuilder.error("Could not insert patient");
