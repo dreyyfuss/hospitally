@@ -3,36 +3,26 @@ package com.hospitally.hospitally.model.entity;
 import lombok.Builder;
 import lombok.Data;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 public class Patient {
-
-    private int patientId;
-
-    private int patientUserId;
-
-    private String patientDateOfBirth;
-
-    private String patientBloodGroup;
-
-    private String patientGenotype;
-
+    private Integer patientId;
+    private Integer patientUserId;
     private String patientGender;
-
+    private LocalDate patientDateOfBirth;
+    private String patientBloodGroup;
+    private String patientGenotype;
     private String patientMaritalStatus;
-
     private String patientDisabilityStatus;
-
-    private String patientNextOfKin;
-
+    private String patientNextOfKinName;
+    private String patientNextOfKinPhoneNumber;
     private String patientOccupation;
-
     private String patientLanguagePreference;
-
-    private String patientCreatedAt;
-
-    private String patientUpdatedAt;
-
+    private LocalDateTime patientCreatedAt;
+    private LocalDateTime patientUpdatedAt;
     private String patientStatus;
 
 }
