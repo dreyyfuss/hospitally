@@ -1,10 +1,16 @@
 package com.hospitally.hospitally.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Staff {
 
     private int staffId;
@@ -17,7 +23,7 @@ public class Staff {
 
     private String staffGender;
 
-    private String staffDateOfBirth;
+    private Date staffDateOfBirth;
 
     private String staffJoinDate;
 
