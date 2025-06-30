@@ -1,32 +1,30 @@
 package com.hospitally.hospitally.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Appointment {
+    private Integer appointmentId;
+    private Integer appointmentPatientId;
+    private Integer appointmentDoctorId;
+    private Integer appointmentDepartmentId;
+    private Integer appointmentPaymentId;
 
-    private int appointmentId;
-
-    private int appointmentPaymentId;
-
-    private int appointmentPatientId;
-
-    private int appointmentDoctorId;
-
-    private int appointmentDepartmentId;
-
-    private String appointmentDate;
-
-    private String appointmentTime;
-
+    private LocalDate appointmentDate;
+    private LocalTime appointmentTime;
     private String appointmentDiagnosis;
-
     private String appointmentStatus;
 
-    private String appointmentCreatedAt;
-
-    private String appointmentUpdatedAt;
-
+    private LocalDateTime appointmentCreatedAt;
+    private LocalDateTime appointmentUpdatedAt;
 }
