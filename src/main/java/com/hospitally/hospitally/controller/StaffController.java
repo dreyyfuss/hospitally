@@ -96,10 +96,4 @@ public class StaffController
         }
         return ResponseEntity.badRequest().body("Invalid Input");
     }
-
-
-
-
-
-
 }
