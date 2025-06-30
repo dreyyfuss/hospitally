@@ -15,4 +15,9 @@ public class AppointmentCreateRequest
     private Date appointmentDate;
 
     private Time appointmentTime;
+
+    private int appointmentDepartmentId;
+
+    private int appointmentDoctorId;
+
 }
