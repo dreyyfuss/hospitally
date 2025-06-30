@@ -78,7 +78,7 @@ public class DoctorService {
                     })
                     .orElse(ApiResponseBuilder.error("Updated Doctor could not be retrieved"));
         }
-        return ApiResponseBuilder.error("Doctor not found");
+        return ApiResponseBuilder.error("Doctor update failed");
     }
 
     public ApiResponse<DoctorResponse> deleteDoctor(int doctorId) {
