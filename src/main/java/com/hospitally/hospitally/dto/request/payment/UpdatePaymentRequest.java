@@ -6,14 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreatePaymentRequest {
-    private LocalDateTime paymentTime;
-    private String paymentReference;
+public class UpdatePaymentRequest {
     private BigDecimal paymentAmount;
+    private String paymentStatus;
 }

@@ -22,9 +22,9 @@ public class OpenAPIConfig
 
                 .info(new Info()
 
-                        .title("Tesa for Java Documentation")
+                        .title("Hospital Management API")
 
-                        .description("Tesa for Java Documentation")
+                        .description("API documentation for Hospital Management System")
 
                         .version("1.0.0"));
 

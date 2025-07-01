@@ -1,24 +1,22 @@
 package com.hospitally.hospitally.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class MedicationSale {
-
-    private int medicationSaleId;
-
-    private int medicationSaleSaleId;
-
-    private int medicationSaleMedicationId;
-
-    private double medicationSaleQuantity;
-
-    private String medicationSaleCreatedAt;
-
-    private String medicationSaleUpdatedAt;
-
+    private Integer medicationSaleId;
+    private Integer medicationSaleSaleId;
+    private Integer medicationSaleMedicationId;
+    private Integer medicationSaleQuantity;
     private String medicationSaleStatus;
-
+    private LocalDateTime medicationSaleCreatedAt;
+    private LocalDateTime medicationSaleUpdatedAt;
 }

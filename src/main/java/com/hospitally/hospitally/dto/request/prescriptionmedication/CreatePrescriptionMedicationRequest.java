@@ -1,4 +1,4 @@
-package com.hospitally.hospitally.dto.request.medicationsale;
+package com.hospitally.hospitally.dto.request.prescriptionmedication;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class CreateMedicationSaleRequest {
-    private Integer saleId;
+@AllArgsConstructor
+public class CreatePrescriptionMedicationRequest {
     private Integer medicationId;
+    private Integer prescriptionId;
     private Integer quantity;
 }

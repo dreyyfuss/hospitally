@@ -1,4 +1,4 @@
-package com.hospitally.hospitally.model.entity;
+package com.hospitally.hospitally.dto.response.prescriptionmedication;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class PrescriptionMedication {
+@AllArgsConstructor
+public class PrescriptionMedicationResponse {
     private Integer medicationPrescriptionId;
     private Integer prescriptionMedicationMedicationId;
     private Integer prescriptionMedicationPrescriptionId;
@@ -19,4 +19,5 @@ public class PrescriptionMedication {
     private String prescriptionMedicationStatus;
     private LocalDateTime prescriptionMedicationCreatedAt;
     private LocalDateTime prescriptionMedicationUpdatedAt;
+    private String message;
 }

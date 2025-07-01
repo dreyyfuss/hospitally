@@ -1,4 +1,4 @@
-package com.hospitally.hospitally.dto.request.prescription;
+package com.hospitally.hospitally.dto.request.prescriptionmedication;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdatePrescriptionRequest {
-    private String comment;
+public class UpdatePrescriptionMedicationRequest {
+    private Integer quantity;
     private String status;
 }
