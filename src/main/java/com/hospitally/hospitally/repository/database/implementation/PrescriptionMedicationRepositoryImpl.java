@@ -42,7 +42,7 @@ public class PrescriptionMedicationRepositoryImpl implements PrescriptionMedicat
                     prescriptionMedicationRowMapper()
             );
             return results.stream().findFirst();
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             return Optional.empty();
         }
     }
